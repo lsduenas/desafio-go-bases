@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/bootcamp-go/desafio-go-bases/internal/tickets"
+	"github.com/lsduenas/desafio-go-bases/internal/tickets"
 )
 
 func main() {

@@ -1,3 +1,3 @@
-module github.com/bootcamp-go/desafio-go-bases
+module github.com/lsduenasb/desafio-go-bases
 
-go 1.17
+go 1.21.0
