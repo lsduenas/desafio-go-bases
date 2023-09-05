@@ -30,6 +30,10 @@ func GetTotalTickets(destination string, ticketList []Ticket) (counter int, e er
 //}
 
 // R3
-//func AverageDestination(destination string, total int) (int error) {
-
-//}
+func AverageDestination(total float64, ticketList []Ticket) (average float64, err error) {
+	if ticketList == nil {
+		panic(err)
+	}
+	average = (total / float64(len(ticketList)))*100
+	return
+}

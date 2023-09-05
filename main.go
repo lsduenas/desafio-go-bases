@@ -63,8 +63,14 @@ func main() {
 	// testing functions 
 	total, err := tickets.GetTotalTickets("Brazil", TicketList)
 	if err != nil {
-		fmt.Println("k paso k paso ")
+		fmt.Println("Error total")
 	}
-	fmt.Println(total)
-	
+	fmt.Println("Total", total)
+
+	// R2
+	average, err:= tickets.AverageDestination(float64(total), TicketList)
+	if err != nil {
+		fmt.Println("Error average ")
+	}
+	fmt.Println("Average", average)
 }
