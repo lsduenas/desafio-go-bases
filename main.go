@@ -60,14 +60,14 @@ func main() {
 	// create ticket list of structures 
 	TicketList = createTicketsList(records)
 
-	// testing functions 
+	// R1 
 	total, err := tickets.GetTotalTickets("Brazil", TicketList)
 	if err != nil {
 		fmt.Println("Error total")
 	}
 	fmt.Println("Total", total)
 
-	// R2
+	// R3
 	average, err:= tickets.AverageDestination(float64(total), TicketList)
 	if err != nil {
 		fmt.Println("Error average ")
