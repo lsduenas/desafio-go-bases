@@ -1,5 +1,7 @@
 package tickets
 
+import "errors"
+
 type Ticket struct {
 	Id int
 	Name string
@@ -11,10 +13,10 @@ type Ticket struct {
 
 
 // R1
-func GetTotalTickets(destination string, ticketList []Ticket) (counter int, e error) {
+func GetTotalTickets(destination string, ticketList []Ticket) (counter int, err error) {
 	counter = 0
 	if ticketList == nil {
-		panic(e)
+		err = errors.New("ticket list is null")
 	}
 	for _, ticket := range ticketList{
 		if ticket.Country == destination {
@@ -32,7 +34,7 @@ func GetTotalTickets(destination string, ticketList []Ticket) (counter int, e er
 // R3
 func AverageDestination(total float64, ticketList []Ticket) (average float64, err error) {
 	if ticketList == nil {
-		panic(err)
+		err = errors.New("ticket list is null")
 	}
 	average = (total / float64(len(ticketList)))*100
 	return

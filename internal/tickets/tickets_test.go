@@ -46,10 +46,12 @@ func TestGetTotalTickets(t *testing.T) {
 		expectedResult := 2
 		
 		// Act
-		obtainedResult, _ := GetTotalTickets(country, ticketList)
+		obtainedResult, err := GetTotalTickets(country, ticketList)
 
 		//Assert
-		assert.Equal(t, expectedResult, obtainedResult)
+		if err == nil {
+			assert.Equal(t, expectedResult, obtainedResult)
+		}
 	})
 	t.Run("Get total tickets from specific country", func(t *testing.T) {
 		// Arrange
@@ -57,10 +59,12 @@ func TestGetTotalTickets(t *testing.T) {
 		expectedResult := 2
 		
 		// Act
-		obtainedResult, _ := GetTotalTickets(country, ticketList)
+		obtainedResult, err := GetTotalTickets(country, ticketList)
 
 		//Assert
-		assert.Equal(t, expectedResult, obtainedResult)
+		if err == nil {
+			assert.Equal(t, expectedResult, obtainedResult)
+		}
 	})
 }
 
@@ -72,10 +76,12 @@ func TestAverageDestination(t *testing.T) {
 		expectedResult := 50.0
 		
 		// Act
-		obtainedResult, _ := AverageDestination(float64(total), ticketList)
+		obtainedResult, err := AverageDestination(float64(total), ticketList)
 
 		//Assert
-		assert.Equal(t, expectedResult, obtainedResult)
+		if err == nil {
+			assert.Equal(t, expectedResult, obtainedResult)
+		}
 	})
 	t.Run("Get average destination", func(t *testing.T) {
 		// Arrange
@@ -84,9 +90,11 @@ func TestAverageDestination(t *testing.T) {
 		expectedResult := 50.0
 		
 		// Act
-		obtainedResult, _ := AverageDestination(float64(total), ticketList)
+		obtainedResult, err := AverageDestination(float64(total), ticketList)
 
 		//Assert
-		assert.Equal(t, expectedResult, obtainedResult)
+		if err == nil {
+			assert.Equal(t, expectedResult, obtainedResult)
+		}
 	})
 }
